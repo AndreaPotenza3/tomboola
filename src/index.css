@@ -51,8 +51,9 @@ ol {
   padding: 10px;
   border-radius: 10px;
   margin: 0;
-  border: 1px solid;
+  border: 1px solid blue;
   cursor: pointer;
+  background-color: white;
 }
 
 .slot {
@@ -79,4 +80,5 @@ ol {
   background-color: white;
   height: 80px;
   text-align: center;
+  border: 1px solid blue;
 }
