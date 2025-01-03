@@ -8,14 +8,12 @@ export default function Table() {
 
         numbers.push(element)
     }
-    console.log(numbers)
     return (
         <div className='container'>
             <div className="row">
                 <ul className='table'>
                     {numbers.map((i) => (
-
-                        <li className='slot'>
+                        <li key={i} className='slot'>
                             {i}
                         </li>
                     ))}
