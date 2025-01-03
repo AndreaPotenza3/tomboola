@@ -2,19 +2,28 @@ import { useState } from "react"
 
 export default function Sidebar() {
 
-    const [randomNumber, setRandomNumber] = useState('-')
 
+    const [extractedNums, setExtractedNums] = useState([])
+    const [showedNumber, setShowedNumber] = useState(null)
+    let num
     function callNumber() {
-        const minCeiled = Math.ceil(1)
-        const maxFloored = Math.floor(90)
+        // const minCeiled = Math.ceil(1)
+        // const maxFloored = Math.floor(90)
+        do {
+            num = Math.floor(Math.random() * 90 + 1)
+        } while (extractedNums.includes(num))
 
-        setRandomNumber(
-            Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
-        )
+        setExtractedNums((prevNum) => [...prevNum, num])
+
+        setShowedNumber(num)
+
     }
 
-    function reset() {
-        setRandomNumber('-')
+    console.log(extractedNums)
+
+    function resetNumber() {
+        setExtractedNums([])
+        setShowedNumber(null)
     }
 
 
@@ -23,10 +32,10 @@ export default function Sidebar() {
         <>
             <div className="btns">
                 <div className="counter">
-                    <p>{randomNumber}</p>
+                    <p>{showedNumber}</p>
                 </div>
                 <button onClick={callNumber} className="btn">Estrai un numero</button>
-                <button onClick={reset} className="btn">Reset</button>
+                <button onClick={resetNumber} className="btn">Reset</button>
             </div>
         </>
     )
