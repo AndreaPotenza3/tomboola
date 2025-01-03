@@ -82,3 +82,14 @@ ol {
   text-align: center;
   border: 1px solid blue;
 }
+
+.active {
+  border-radius: 50%;
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  width: calc(100% / 11);
+  text-align: center;
+  border: 2px solid blue;
+}

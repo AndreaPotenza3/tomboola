@@ -3,7 +3,10 @@ import Table from "./Table";
 import Title from "./title";
 
 
+
 export default function Main() {
+
+
     return (
         <>
             <div>
