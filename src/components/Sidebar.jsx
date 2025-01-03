@@ -13,7 +13,7 @@ export default function Sidebar() {
             num = Math.floor(Math.random() * 90 + 1)
         } while (extractedNums.includes(num))
 
-        setExtractedNums((prevNum) => [...prevNum, num])
+        setExtractedNums((extractedNums) => [...extractedNums, num])
 
         setShowedNumber(num)
 
